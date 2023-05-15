@@ -1,14 +1,12 @@
 import "./App.css";
+import Home from './pages/Home/Home';
+import { GlobalStyle } from "./assets/styles/Global";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
-      <h1>
-        <div>
-          <p></p>
-        </div>
-      </h1>
+      <GlobalStyle />
+      <Home />
     </div>
   );
 }
