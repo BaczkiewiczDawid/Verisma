@@ -35,31 +35,3 @@ export const HamburgerWrapper = styled.div`
     display: none;
   }
 `;
-
-export const ListWrapper = styled.ul`
-  padding: 0;
-  text-align: center;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-`;
-
-export const ListItem = styled.li`
-  list-style: none;
-  padding: 1.2rem 0;
-
-  @media screen and (min-width: 768px) {
-    padding: 0 1rem;
-  }
-`;
-
-export const Link = styled.a`
-  color: ${({ theme }) => theme.colors.black};
-  text-decoration: none;
-  cursor: pointer;
-
-  @media screen and (min-width: 768px) {
-    color: ${({ theme }) => theme.colors.white};
-  }
-`;

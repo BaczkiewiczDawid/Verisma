@@ -3,10 +3,8 @@ import {
   Wrapper,
   HamburgerButton,
   HamburgerWrapper,
-  ListWrapper,
-  ListItem,
-  Link
 } from "./Navigation.styles";
+import NavigationLinks from "./NavigationLinks";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,33 +17,12 @@ const Navigation = () => {
     <>
       <Wrapper>
         <h2>Logo</h2>
-        <ListWrapper>
-            <ListItem>
-                <Link href="#">Link 1</Link>
-            </ListItem>
-            <ListItem>
-                <Link href="#">Link 2</Link>
-            </ListItem>
-            <ListItem>
-                <Link href="#">Link 3</Link>
-            </ListItem>
-        </ListWrapper>
+        <NavigationLinks isPrimary={true} />
         <HamburgerButton onClick={handleOpenNav} />
       </Wrapper>
       {isOpen && (
         <HamburgerWrapper>
-          <ListWrapper>
-            <ListItem
-            >
-              <Link href="#">Link 1 asdsad</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="#">Link 2</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="#">Link 3asdasd </Link>
-            </ListItem>
-          </ListWrapper>
+          <NavigationLinks/>
         </HamburgerWrapper>
       )}
     </>
