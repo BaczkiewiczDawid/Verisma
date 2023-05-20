@@ -14,7 +14,7 @@ export const Wrapper = styled.nav`
 export const HamburgerButton = styled.div`
   width: 50px;
   height: 50px;
-  background-color: white;
+  background-color: ${props => props.isOpen ? 'black' : 'white'};
   cursor: pointer;
   z-index: 3;
 
@@ -26,7 +26,8 @@ export const HamburgerButton = styled.div`
 export const HamburgerWrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: ${({ theme }) => theme.colors.white};

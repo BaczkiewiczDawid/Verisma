@@ -18,7 +18,7 @@ const Navigation = () => {
       <Wrapper>
         <h2>Logo</h2>
         <NavigationLinks isPrimary={true} />
-        <HamburgerButton onClick={handleOpenNav} />
+        <HamburgerButton isOpen={isOpen} onClick={handleOpenNav} />
       </Wrapper>
       {isOpen && (
         <HamburgerWrapper>
