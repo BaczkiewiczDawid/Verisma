@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
   Wrapper,
-  HamburgerButton,
   HamburgerWrapper,
 } from "./Navigation.styles";
 import NavigationLinks from "./NavigationLinks";
+import Hamburger from "./Hamburger";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +18,13 @@ const Navigation = () => {
       <Wrapper>
         <h2>Logo</h2>
         <NavigationLinks isPrimary={true} />
-        <HamburgerButton isOpen={isOpen} onClick={handleOpenNav} />
+        <Hamburger isOpen={isOpen} handleOpenNav={handleOpenNav} />
+        {isOpen && (
+          <HamburgerWrapper>
+            <NavigationLinks />
+          </HamburgerWrapper>
+        )}
       </Wrapper>
-      {isOpen && (
-        <HamburgerWrapper>
-          <NavigationLinks/>
-        </HamburgerWrapper>
-      )}
     </>
   );
 };
