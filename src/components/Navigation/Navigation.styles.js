@@ -12,11 +12,29 @@ export const Wrapper = styled.nav`
 `;
 
 export const HamburgerButton = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: ${props => props.isOpen ? 'black' : 'white'};
+  width: 40px;
+  height: 5px;
+  background-color: ${(props) => (props.isOpen ? "black" : "white")};
   cursor: pointer;
+  border-radius: 1rem;
   z-index: 3;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 40px;
+    height: 5px;
+    background-color: ${(props) => (props.isOpen ? "black" : "white")};
+    position: absolute;
+    left: 0;
+    top: -12px;
+    border-radius: 1rem;
+  }
+
+  &::after {
+    top: 12px;
+  }
 
   @media screen and (min-width: 768px) {
     display: none;

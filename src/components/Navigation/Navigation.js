@@ -19,12 +19,12 @@ const Navigation = () => {
         <h2>Logo</h2>
         <NavigationLinks isPrimary={true} />
         <HamburgerButton isOpen={isOpen} onClick={handleOpenNav} />
+        {isOpen && (
+          <HamburgerWrapper>
+            <NavigationLinks />
+          </HamburgerWrapper>
+        )}
       </Wrapper>
-      {isOpen && (
-        <HamburgerWrapper>
-          <NavigationLinks/>
-        </HamburgerWrapper>
-      )}
     </>
   );
 };
