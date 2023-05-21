@@ -14,7 +14,8 @@ export const Wrapper = styled.nav`
 export const HamburgerButton = styled.div`
   width: 40px;
   height: 5px;
-  background-color: ${(props) => (props.isOpen ? "black" : "white")};
+  /* background-color: ${(props) => (props.isOpen ? "black" : "white")}; */
+  background-color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   border-radius: 1rem;
   z-index: 3;
@@ -28,12 +29,15 @@ export const HamburgerButton = styled.div`
     background-color: ${(props) => (props.isOpen ? "black" : "white")};
     position: absolute;
     left: 0;
-    top: -12px;
+    top: ${(props) => (props.isOpen ? "0" : "-12px")};
     border-radius: 1rem;
+    transform: ${(props) => (props.isOpen ? "rotate(45deg)" : "none")};
+    transition: .5s;
   }
 
   &::after {
-    top: 12px;
+    top: ${(props) => (props.isOpen ? "0" : "12px")};
+    transform: ${(props) => (props.isOpen ? "rotate(-45deg)" : "none")};
   }
 
   @media screen and (min-width: 768px) {
