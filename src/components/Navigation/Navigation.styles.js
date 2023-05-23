@@ -22,7 +22,7 @@ export const HamburgerWrapper = styled.div`
   left: 0;
   background-color: ${({ theme }) => theme.colors.white};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.medium}) {
     display: none;
   }
 `;

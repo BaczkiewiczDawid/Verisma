@@ -9,4 +9,10 @@ export const theme = {
     primary: "Inter",
     secondary: "Inria Serif",
   },
+  screen: {
+    small: '320px',
+    medium: '768px',
+    large: '1080px',
+    extraLarge: '1440px'
+  }
 };

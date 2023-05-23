@@ -28,7 +28,7 @@ export const HamburgerButton = styled.div`
     transform: ${(props) => (props.isOpen ? "rotate(-45deg)" : "none")};
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.medium}) {
     display: none;
   }
 `;

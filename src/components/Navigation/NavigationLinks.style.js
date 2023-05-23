@@ -4,7 +4,7 @@ export const ListItem = styled.li`
   list-style: none;
   padding: 1.2rem 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.medium}) {
     padding: 0 2rem;
   }
 `;
@@ -14,7 +14,7 @@ export const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.medium}) {
     color: ${({ theme }) => theme.colors.white};
   }
 `;
@@ -24,7 +24,7 @@ export const ListWrapper = styled.ul`
   text-align: center;
   display: ${props => props.primary ? 'none' : 'block'};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.medium}) {
     display: flex;
   }
 `;
