@@ -2,16 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.nav`
   width: 100vw;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 1rem;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
 `;
-
-
 
 export const HamburgerWrapper = styled.div`
   width: 100vw;

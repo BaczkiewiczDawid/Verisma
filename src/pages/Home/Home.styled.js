@@ -1,27 +1,51 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Background = styled.div`
-  width: 100vw;
+export const Header = styled.header`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.secondary};
   height: 100vh;
-  position: fixed;
-  z-index: -999;
-  top: 0;
-  left: 0;
+`;
+
+export const Container = styled.div`
+  margin: 15rem auto 0 auto;
 `;
 
 export const Image = styled.img`
-  object-fit: cover;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 `;
 
-export const Header = styled.header`
-    color: ${({ theme }) => theme.colors.white};
-    z-index: 1;
-    font-family: ${({ theme }) => theme.fonts.secondary};
-    font-weight: 300;
-    margin-top: 20rem;
-    font-size: 1.3rem;
-    width: 80%;
-    margin: 20rem auto 0 auto;
+export const Section = styled.section`
+  background-color: ${({ theme }) => theme.colors.purple};
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  color: ${({ theme }) => theme.colors.white};
+
+  h2 {
+    margin: 2rem 0;
+    font-size: 1.7rem;
+  }
+`;
+
+export const SectionBox = styled.div`
+  margin: 2rem auto;
+  width: 80%;
+
+  p {
+    line-height: 1.2rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.medium}) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
