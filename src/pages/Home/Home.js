@@ -1,7 +1,19 @@
 import React from "react";
 import BackgroundImage from "../../assets/images/background.png";
-import { Image, Header, Section, Container, Box, SectionBox } from "./Home.styled";
+import {
+  Image,
+  Header,
+  Section,
+  Container,
+  Box,
+  SectionBox,
+  Article,
+  Content,
+  ArticleImage
+} from "./Home.styled";
 import Button from "../../components/Button";
+import ManImage from '../../assets/images/man.png';
+import WomanImage from '../../assets/images/woman.png';
 
 const Home = () => {
   return (
@@ -25,6 +37,26 @@ const Home = () => {
           </p>
         </SectionBox>
       </Section>
+      <Article>
+        <Content>
+          <h2>Clothes for Him</h2>
+          <p>Look dashing while on the go with our casual wear items.</p>
+          <Button text="Shop now" />
+        </Content>
+        <ArticleImage>
+          <img src={ManImage} alt="" />
+        </ArticleImage>
+      </Article>
+      <Article secondary>
+        <Content>
+          <h2>Clothes for Her</h2>
+          <p>Look dashing while on the go with our casual wear items.</p>
+          <Button text="Shop now" />
+        </Content>
+        <ArticleImage>
+          <img src={WomanImage} alt="" />
+        </ArticleImage>
+      </Article>
     </Box>
   );
 };

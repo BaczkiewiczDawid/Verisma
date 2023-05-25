@@ -15,5 +15,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Inter', sans-serif;
         overflow-x: hidden;
+        color: #2a2a2a;
     }
 `;
